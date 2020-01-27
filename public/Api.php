@@ -28,9 +28,9 @@ switch ($mode){
             Fan::url($http_url.$url_coded);
         }
         $url_coded=Coded::url_coded_short($url);
-        if (!$M->Insert("url", array("user","url","url_coded","url_type"), array($user,$url,$url_coded,'0')))
+        if (!$M->Insert("url", array("user","url","url_coded","url_type"), array(0,$url,$url_coded,'0')))
             Fan::error('生成失败',400);
-        Fan::url($url_coded);
+        Fan::url($http_url.$url_coded);
         break;
 
     case 'api-h'://还原短链，并显示是防红还是普通
@@ -70,9 +70,9 @@ switch ($mode){
             Fan::url($http_url.$url_coded);
         }
         $url_coded=Coded::url_coded_short($url);
-        if (!$M->Insert("url", array("user","url","url_coded","url_type"), array($user,$url,$url_coded,'1')))
+        if (!$M->Insert("url", array("user","url","url_coded","url_type"), array(0,$url,$url_coded,'1')))
             Fan::error('生成失败',400);
-        Fan::url($url_coded);
+        Fan::url($http_url.$url_coded);
         break;
 
     default:
