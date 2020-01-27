@@ -39,8 +39,7 @@ class Coded
             //将分段的位与0x3fffffff做位与，0x3fffffff表示二进制数的30个1，即30位以后的加密串都归零
             //此处需要用到hexdec()将16进制字符串转为10进制数值型，否则运算会不正常
             $hex = hexdec($urlhash_piece) & 0x3fffffff;
-            //域名,默认本域名
-            $short_url = 'http://'.$_SERVER['SERVER_NAME'].'/';
+            $short_url = '';
             //生成6位短网址
             for ($j = 0; $j < 6; $j++) {
                 //将得到的值与0x0000003d,3d为61，即charset的坐标最大值
