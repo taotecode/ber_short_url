@@ -3,10 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1
--- 生成日期： 2020-02-20 13:06:41
+-- 生成日期： 2020-02-20 19:43:47
 -- 服务器版本： 10.1.37-MariaDB
 -- PHP 版本： 7.3.1
 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -31,7 +32,7 @@ CREATE TABLE `black` (
   `id` bigint(20) NOT NULL,
   `url` text COMMENT '黑名单url',
   `ip` text COMMENT '黑名单ip'
-) ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='黑名单';
 
 -- --------------------------------------------------------
 
@@ -47,8 +48,8 @@ CREATE TABLE `url` (
   `url_coded` text NOT NULL COMMENT '短链编码',
   `url_type` int(11) NOT NULL DEFAULT '1' COMMENT '短链方式',
   `visit` bigint(20) NOT NULL DEFAULT '0' COMMENT '访问次数',
-  `time` datetime NOT NULL COMMENT '生成时间'
-) ;
+  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '生成时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -60,7 +61,14 @@ CREATE TABLE `user` (
   `user` bigint(20) NOT NULL,
   `pass` text NOT NULL,
   `status` text COMMENT '身份'
-) ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `user`
+--
+
+INSERT INTO `user` (`user`, `pass`, `status`) VALUES
+(2144680883, 'e10adc3949ba59abbe56e057f20f883e', 'root');
 
 --
 -- 转储表的索引
