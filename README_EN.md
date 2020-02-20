@@ -32,11 +32,14 @@ Or directly take all the files in the public folder to the root directory of the
 
 2、 Create a table in the database and import `SQL. sql` from the public folder to the table you just created.
 
-3、 Modify ** BER / db / init. PHP ** to configure the database connection.
+3、 Modify **BER/db/init.PHP** to configure the database connection.
 Now that the installation is complete, you can visit your project.
 
 #### <center> background address </center >
 Because I took all the public files out for installation, my address is'`http://abc.com/ber/admin / `, which can be accessed generally
+Background default account password
+**Account number **: ** 2144680883**
+**Password **: ** 123456**
 
 # <center> short chain algorithm </center >
 
