@@ -18,7 +18,7 @@
 api接口文档：[https://www.kancloud.cn/yuanzhu/iapp/1511496](https://www.kancloud.cn/yuanzhu/iapp/1511496 "https://www.kancloud.cn/yuanzhu/iapp/1511496")
 
 # <center>安装</center>
-环境要求：Apache、php5.6+、MySql 5.6.5(必须要开启高级功能，否则会导入失败，如果导入失败请通过[blog.berfen.com](https://blog.berfen.com "blog.berfen.com")联系我)
+环境要求：Apache、php7.1+、MySql 5.6.5(必须要开启高级功能，否则会导入失败，如果导入失败请通过[blog.berfen.com](https://blog.berfen.com "blog.berfen.com")联系我)
 
 Nginx需要独立配置伪静态，当然，你可以依靠一些网站在线把apache伪静态转为nginx伪静态
 
