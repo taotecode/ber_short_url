@@ -40,6 +40,8 @@ Because I took all the public files out for installation, my address is'`http://
 Background default account password
 **Account number **: ** 2144680883**
 **Password **: ** 123456**
+##### Basic configuration
+Basically, all website configurations are in the file `BER/init.PHP`
 
 # <center> short chain algorithm </center >
 
