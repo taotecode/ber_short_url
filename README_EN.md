@@ -22,7 +22,7 @@ API interface document: [https://www.kancloud.cn/yuanzhu/iapp/1511496](https://w
 
 # <center> install </center >
 
-Environment requirements: Apache, php5.6 +, MySQL 5.6.5 (advanced functions must be enabled, otherwise the import will fail. If the import fails, please contact me through [blog. Berfen. Com](https://blog.berfen.com "blog. Berfen. Com")
+Environment requirements: Apache, php7.1 +, MySQL 5.6.5 (advanced functions must be enabled, otherwise the import will fail. If the import fails, please contact me through [blog. Berfen. Com](https://blog.berfen.com "blog. Berfen. Com")
 
 Nginx needs to be configured with pseudo static independently. Of course, you can rely on some websites to convert Apache pseudo static to nginx pseudo static online
 
