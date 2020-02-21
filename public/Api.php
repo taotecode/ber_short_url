@@ -32,6 +32,8 @@ switch ($mode){
             $url_type_f=1;
         else
             Fan::error('请选择正确的短链属性');
+        if ($M->IsExists('black', "ip='".get_ip()."'"))Fan::error('您的IP已被管理员拉黑！');
+        if ($M->IsExists('black', "url='$url'"))Fan::error('您要生成的长链已被管理员拉黑！');
         if ($M->IsExists('url', "url='$url' and url_type='$url_type_f'")){//存在URL
             if (!$M->Update("url", array('url_type'=>$url_type), "url='$url'"))
                 Fan::error('生成失败',400);
@@ -59,6 +61,8 @@ switch ($mode){
             Fan::error("请输入正确的URL，并包含http://或https://");
         if (isset($_COOKIE["url"]))
             Fan::error('每个用户每分钟只能生成一次，请过一会再来吧');
+        if ($M->IsExists('black', "ip='".get_ip()."'"))Fan::error('您的IP已被管理员拉黑！');
+        if ($M->IsExists('black', "url='$url'"))Fan::error('您要生成的长链已被管理员拉黑！');
         if ($M->IsExists('url', "url='$url' and url_type=1")){
             if (!$M->Update("url", array('url_type'=>0), "url='$url'"))
                 Fan::error('生成失败',400);
@@ -103,6 +107,8 @@ switch ($mode){
             Fan::error("请输入正确的URL，并包含http://或https://");
         if (isset($_COOKIE["url"]))
             Fan::error('每个用户每分钟只能生成一次，请过一会再来吧');
+        if ($M->IsExists('black', "ip='".get_ip()."'"))Fan::error('您的IP已被管理员拉黑！');
+        if ($M->IsExists('black', "url='$url'"))Fan::error('您要生成的长链已被管理员拉黑！');
         if ($M->IsExists('url', "url='$url' and url_type=0")){
             if (!$M->Update("url", array('url_type'=>1), "url='$url'"))
                 Fan::error('生成失败',400);
