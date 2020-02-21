@@ -47,7 +47,7 @@ switch ($mode){
             Fan::url($http_url.$url_coded);
         }
         $url_coded=Coded::url_coded_short($url);
-        if (!$M->Insert("url", array("user","url","url_coded","url_type"), array($user,$url,$url_coded,$url_type)))
+        if (!$M->Insert("url", array("user","ip","url","url_coded","url_type"), array(0,get_ip(),$url,$url_coded,$url_type)))
             Fan::error('生成失败',400);
         Fan::url($http_url.$url_coded);
         break;
@@ -74,7 +74,7 @@ switch ($mode){
             Fan::url($http_url.$url_coded);
         }
         $url_coded=Coded::url_coded_short($url);
-        if (!$M->Insert("url", array("user","url","url_coded","url_type"), array($user,$url,$url_coded,'0')))
+        if (!$M->Insert("url", array("user","ip","url","url_coded","url_type"), array(0,get_ip(),$url,$url_coded,'0')))
             Fan::error('生成失败',400);
         Fan::url($http_url.$url_coded);
         break;
@@ -116,7 +116,7 @@ switch ($mode){
             Fan::url($http_url.$url_coded);
         }
         $url_coded=Coded::url_coded_short($url);
-        if (!$M->Insert("url", array("user","url","url_coded","url_type"), array($user,$url,$url_coded,'1')))
+        if (!$M->Insert("url", array("user","ip","url","url_coded","url_type"), array(0,get_ip(),$url,$url_coded,'1')))
             Fan::error('生成失败',400);
         Fan::url($http_url.$url_coded);
         break;
