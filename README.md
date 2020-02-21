@@ -1,14 +1,11 @@
 # <center>ber_Short_Url短链项目</center>
-## <center>V1.2</center>
+## <center>V1.0</center>
 ##### <center>[中文](https://github.com/yuanzhumc/ber_Short_Url/blob/master/README.md)|[English](https://github.com/yuanzhumc/ber_Short_Url/blob/master/README_EN.md)</center>
 
 这是由院主网络科技团队开发的一款小型个人站短链接服务。功能有：短链生成，短链还原，防红链接生成，防红和普通短链互转。
 短链接不调用其他网站，直接使用本站链接，方便维护，访问快捷，自定义多样化
 本项目是由jquery+layui组成的
 # <center>更新日志</center>
-##### V1.2
-- 在原有的基础上增加后台管理
-- 增加api调用生成接口
 
 ##### V1.0
 - 实现短链生成、短链还原、短链防红，短链互转
@@ -31,11 +28,6 @@ Nginx需要独立配置伪静态，当然，你可以依靠一些网站在线把
 
 现在就已经安装完成，可以访问你的项目看看啦。
 
-#### <center>后台地址</center>
-由于我是将public文件全部取出安装的，所以我的地址是`http://abc.com/ber/admin/`，一般来说这个地址都可以访问
-后台默认账号密码
-**账号**:**2144680883**
-**密码**:**123456**
 ##### 基本配置
 基本所有的网站配置都在`ber/init.php`文件里
 
