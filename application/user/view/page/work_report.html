@@ -1,0 +1,159 @@
+{include file="public/head" /}
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <div class="layui-card">
+            <div class="layui-card-header"><i class="fa fa-line-chart icon icon-blue"></i>报表统计[T+1 凌晨12点开始生成统计]</div>
+            <div class="layui-card-body">
+                <div id="echarts-records" style="width: 100%;min-height:500px"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{//include file="public/foot" /}
+<script src="__HOME__lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script src="__HOME__/lib/layui-v2.5.6/layui.js" charset="utf-8"></script>
+<script src="__HOME__/js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+<script>
+    layui.use(['layer', 'echarts'], function () {
+        var $ = layui.jquery,
+            layer = layui.layer,
+            echarts = layui.echarts;
+
+        /**
+         * 报表功能
+         */
+        var echartsRecords = echarts.init(document.getElementById('echarts-records'), 'walden');
+
+        var optionRecords = {
+            title: {
+                text: '业务短链-报表图'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+            legend: {
+                data: ['访问次数','电脑访问','手机访问','IP数','QQ访问','微信访问']
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: [getBeforeDate(6),getBeforeDate(5),getBeforeDate(4),getBeforeDate(3),'前天','昨天','今天']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name:'访问次数',
+                    type:'line',
+                    data:[
+                        '{$count_pv_data.day6}',
+                        '{$count_pv_data.day5}',
+                        '{$count_pv_data.day4}',
+                        '{$count_pv_data.day3}',
+                        '{$count_pv_data.before}',
+                        '{$count_pv_data.Yesterday}',
+                        '{$count_pv_data.Today}'
+                    ]
+                },
+                {
+                    name:'电脑访问',
+                    type:'line',
+                    data:[
+                        '{$count_pc_data.day6}',
+                        '{$count_pc_data.day5}',
+                        '{$count_pc_data.day4}',
+                        '{$count_pc_data.day3}',
+                        '{$count_pc_data.before}',
+                        '{$count_pc_data.Yesterday}',
+                        '{$count_pc_data.Today}'
+                    ]
+                },
+                {
+                    name:'手机访问',
+                    type:'line',
+                    data:[
+                        '{$count_pe_data.day6}',
+                        '{$count_pe_data.day5}',
+                        '{$count_pe_data.day4}',
+                        '{$count_pe_data.day3}',
+                        '{$count_pe_data.before}',
+                        '{$count_pe_data.Yesterday}',
+                        '{$count_pe_data.Today}'
+                    ]
+                },
+                {
+                    name:'IP数',
+                    type:'line',
+                    data:[
+                        '{$count_ip_data.day6}',
+                        '{$count_ip_data.day5}',
+                        '{$count_ip_data.day4}',
+                        '{$count_ip_data.day3}',
+                        '{$count_ip_data.before}',
+                        '{$count_ip_data.Yesterday}',
+                        '{$count_ip_data.Today}'
+                    ]
+                },
+                {
+                    name:'QQ访问',
+                    type:'line',
+                    data:[
+                        '{$count_qq_data.day6}',
+                        '{$count_qq_data.day5}',
+                        '{$count_qq_data.day4}',
+                        '{$count_qq_data.day3}',
+                        '{$count_qq_data.before}',
+                        '{$count_qq_data.Yesterday}',
+                        '{$count_qq_data.Today}'
+                    ]
+                },
+                {
+                    name:'微信访问',
+                    type:'line',
+                    data:[
+                        '{$count_wx_data.day6}',
+                        '{$count_wx_data.day5}',
+                        '{$count_wx_data.day4}',
+                        '{$count_wx_data.day3}',
+                        '{$count_wx_data.before}',
+                        '{$count_wx_data.Yesterday}',
+                        '{$count_wx_data.Today}'
+                    ]
+                }
+            ]
+        };
+        echartsRecords.setOption(optionRecords);
+
+
+
+        // echarts 窗口缩放自适应
+        window.onresize = function () {
+            echartsRecords.resize();
+        }
+
+    });
+</script>
+</body>
+</html>

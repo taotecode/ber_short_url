@@ -1,0 +1,443 @@
+{include file="public/head" /}
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md8">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md6">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-bar-chart icon icon-blue"></i>数据统计</div>
+                            <div class="layui-card-body">
+                                <div class="welcome-module">
+                                    <div class="layui-row layui-col-space10">
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-blue">总</span>
+                                                        <h5>链接统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">{$user_data.url_num}</h1>
+                                                        <small>生成总链接数(每天0点更新)</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-blue">总</span>
+                                                        <h5>流量统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">{$user_data.visit}</h1>
+                                                        <small>链接访问总流量(每天0点更新)</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-orange">当前</span>
+                                                        <h5>链接统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">{$url_num}</h1>
+                                                        <small>生成总链接数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-orange">当前</span>
+                                                        <h5>流量统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">{$url_visit}</h1>
+                                                        <small>链接访问总流量</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-orange">当前</span>
+                                                        <h5>API链接统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">1</h1>
+                                                        <small>API生成总链接数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-orange">当前</span>
+                                                        <h5>业务链接统计</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">5</h1>
+                                                        <small>业务总链接数</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-credit-card icon icon-blue"></i>快捷入口</div>
+                            <div class="layui-card-body">
+                                <div class="welcome-module">
+                                    <div class="layui-row layui-col-space10 layuimini-qiuck">
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="user/new_url.html" data-title="新建短链" data-icon="fa fa-window-maximize">
+                                                <i class="fa fa-link"></i>
+                                                <cite>新建短链</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="user/url_list.html" data-title="短链管理" data-icon="fa fa-gears">
+                                                <i class="fa fa-link"></i>
+                                                <cite>短链管理</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="user/work_url_list.html" data-title="业务短链" data-icon="fa fa-file-text">
+                                                <i class="fa fa-link"></i>
+                                                <cite>业务短链</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="user/link_conf.html" data-title="链接配置" data-icon="fa fa-dot-circle-o">
+                                                <i class="fa fa-cog"></i>
+                                                <cite>链接配置</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="user/vip.html" data-title="我的会员" data-icon="fa fa-calendar">
+                                                <i class="fa fa-diamond"></i>
+                                                <cite>我的会员</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="user/api.html" data-title="API接口" data-icon="fa fa-hourglass-end">
+                                                <i class="fa fa-cloud"></i>
+                                                <cite>API接口</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="user/report_list.html" data-title="举报管理" data-icon="fa fa-snowflake-o">
+                                                <i class="fa fa-paper-plane"></i>
+                                                <cite>举报管理</cite>
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-xs3 layuimini-qiuck-module">
+                                            <a href="javascript:;" layuimini-content-href="user/appeal_list.html" data-title="申诉管理" data-icon="fa fa-shield">
+                                                <i class="fa fa-navicon"></i>
+                                                <cite>申诉管理</cite>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div class="layui-card-header"><i class="fa fa-line-chart icon icon-blue"></i>报表统计[T+1 凌晨12点开始生成统计]</div>
+                            <div class="layui-card-body">
+                                <div id="echarts-records" style="width: 100%;min-height:500px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md4">
+
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-bullhorn icon icon-blue"></i>系统公告</div>
+                    <div class="layui-card-body layui-text">
+                        {volist name="news_list" id="d"}
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">{$d.title}</div>
+                            <div class="layuimini-notice-extra">{$d.time}</div>
+                            <div class="layuimini-notice-url" style="display: none">{$d.link}</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                {$d.text}
+                            </div>
+                        </div>
+                        {/volist}
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-newspaper-o icon icon-blue"></i>广告墙</div>
+                    <div class="layui-card-body layui-text">
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">需要挂广告请联系客服</div>
+                            <div class="layuimini-notice-extra">{:date('Y-m-d H:i:s')}</div>
+                            <div class="layuimini-notice-url" style="display: none">https://wpa.qq.com/msgrd?v=3&uin=1406094144&site=pay&menu=yes</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                需要挂广告请联系客服
+                            </div>
+                        </div>
+                        {volist name="ad_list" id="d"}
+                        <div class="layuimini-notice">
+                            <div class="layuimini-notice-title">{$d.title}</div>
+                            <div class="layuimini-notice-extra">{$d.time}</div>
+                            <div class="layuimini-notice-url" style="display: none">{$d.link}</div>
+                            <div class="layuimini-notice-content layui-hide">
+                                {$d.text}
+                            </div>
+                        </div>
+                        {/volist}
+                    </div>
+                </div>
+
+                <div class="layui-card">
+                    <div class="layui-card-header"><i class="fa fa-fire icon icon-blue"></i>版本信息</div>
+                    <div class="layui-card-body layui-text">
+                        <table class="layui-table">
+                            <colgroup>
+                                <col width="100">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <td>本站框架</td>
+                                <td>
+                                    layuimini|layui|Think PHP 5
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>当前版本</td>
+                                <td>v1.5.0</td>
+                            </tr>
+                            <tr>
+                                <td>项目开源地址</td>
+                                <td style="padding-bottom: 0;">
+                                    <div class="layui-btn-container">
+                                        <a href="https://gitee.com/yuanzhumc/ber_Short_Url" target="_blank" style="margin-right: 15px"><img src="https://gitee.com/yuanzhumc/ber_Short_Url/badge/star.svg?theme=dark" alt="star"></a>
+                                        <a href="https://gitee.com/yuanzhumc/ber_Short_Url" target="_blank"><img src="https://gitee.com/yuanzhumc/ber_Short_Url/badge/fork.svg?theme=dark" alt="fork"></a>
+                                    </div>
+                                    需要本站源码请联系购买！(498元)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>版权所有</td>
+                                <td>院主网络科技团队|BER分<a href="https://www.berfen.com/" target="_blank">访问官网</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    联系我们
+                                </td>
+                                <td>
+                                    <a href="https://www.berfen.com/" target="_blank">官网</a>|
+                                    <a href="https://wpa.qq.com/msgrd?v=3&uin=1406094144&site=pay&menu=yes" target="_blank">客服</a>|
+                                    <a href="https://jq.qq.com/?_wv=1027&k=5xn5iV5" target="_blank">交流群</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    友联
+                                </td>
+                                <td>
+                                    <a href="http://pay.berfen.com/user" target="_blank">BER分支付系统[支付宝QQ费率低至2%]</a>|
+                                    <a href="https://blog.berfen.com" target="_blank">BER分博客</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__HOME__/lib/jquery-3.4.1/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script src="__HOME__/lib/layui-v2.5.6/layui.js" charset="utf-8"></script>
+<script src="__HOME__/js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+<script>
+    layui.use(['layer', 'miniTab','echarts'], function () {
+        var $ = layui.jquery,
+            layer = layui.layer,
+            miniTab = layui.miniTab,
+            echarts = layui.echarts;
+
+        miniTab.listen();
+
+        /**
+         * 查看公告信息
+         **/
+        $('body').on('click', '.layuimini-notice', function () {
+            var title = $(this).children('.layuimini-notice-title').text(),
+                noticeTime = $(this).children('.layuimini-notice-extra').text(),
+                content = $(this).children('.layuimini-notice-content').html(),
+                url = $(this).children('.layuimini-notice-url').text();
+            var html = '<div style="padding:15px 20px; text-align:justify; line-height: 22px;border-bottom:1px solid #e2e2e2;background-color: #2f4056;color: #ffffff">\n' +
+                '<div style="text-align: center;margin-bottom: 20px;font-weight: bold;border-bottom:1px solid #718fb5;padding-bottom: 5px"><h4 class="text-danger">' + title + '</h4></div>\n' +
+                '<div style="font-size: 12px">' + content + '</div>\n' +
+                '</div>\n';
+            console.log(url);
+            parent.layer.open({
+                type: 1,
+                title: '系统公告'+'<span style="float: right;right: 1px;font-size: 12px;color: #b1b3b9;margin-top: 1px">'+noticeTime+'</span>',
+                area: '300px;',
+                shade: 0.8,
+                id: 'layuimini-notice',
+                btn: ['查看', '取消'],
+                btnAlign: 'c',
+                moveType: 1,
+                content:html,
+                success: function (layero) {
+                    if (url===''){
+                        layer.msg('无查看地址！');
+                    }else{
+                        var btn = layero.find('.layui-layer-btn');
+                        btn.find('.layui-layer-btn0').attr({
+                            href: url,
+                            target: '_blank'
+                        });
+                    }
+                }
+            });
+        });
+
+        /**
+         * 报表功能
+         */
+        var echartsRecords = echarts.init(document.getElementById('echarts-records'), 'walden');
+        var optionRecords = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['访问次数','电脑访问','手机访问','IP数','QQ访问','微信访问']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: [getBeforeDate(6),getBeforeDate(5),getBeforeDate(4),getBeforeDate(3),'前天','昨天','今天']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name:'访问次数',
+                    type:'line',
+                    data:[
+                        '{$count_pv_data.day6}',
+                        '{$count_pv_data.day5}',
+                        '{$count_pv_data.day4}',
+                        '{$count_pv_data.day3}',
+                        '{$count_pv_data.before}',
+                        '{$count_pv_data.Yesterday}',
+                        '{$count_pv_data.Today}'
+                    ]
+                },
+                {
+                    name:'电脑访问',
+                    type:'line',
+                    data:[
+                        '{$count_pc_data.day6}',
+                        '{$count_pc_data.day5}',
+                        '{$count_pc_data.day4}',
+                        '{$count_pc_data.day3}',
+                        '{$count_pc_data.before}',
+                        '{$count_pc_data.Yesterday}',
+                        '{$count_pc_data.Today}'
+                    ]
+                },
+                {
+                    name:'手机访问',
+                    type:'line',
+                    data:[
+                        '{$count_pe_data.day6}',
+                        '{$count_pe_data.day5}',
+                        '{$count_pe_data.day4}',
+                        '{$count_pe_data.day3}',
+                        '{$count_pe_data.before}',
+                        '{$count_pe_data.Yesterday}',
+                        '{$count_pe_data.Today}'
+                    ]
+                },
+                {
+                    name:'IP数',
+                    type:'line',
+                    data:[
+                        '{$count_ip_data.day6}',
+                        '{$count_ip_data.day5}',
+                        '{$count_ip_data.day4}',
+                        '{$count_ip_data.day3}',
+                        '{$count_ip_data.before}',
+                        '{$count_ip_data.Yesterday}',
+                        '{$count_ip_data.Today}'
+                    ]
+                },
+                {
+                    name:'QQ访问',
+                    type:'line',
+                    data:[
+                        '{$count_qq_data.day6}',
+                        '{$count_qq_data.day5}',
+                        '{$count_qq_data.day4}',
+                        '{$count_qq_data.day3}',
+                        '{$count_qq_data.before}',
+                        '{$count_qq_data.Yesterday}',
+                        '{$count_qq_data.Today}'
+                    ]
+                },
+                {
+                    name:'微信访问',
+                    type:'line',
+                    data:[
+                        '{$count_wx_data.day6}',
+                        '{$count_wx_data.day5}',
+                        '{$count_wx_data.day4}',
+                        '{$count_wx_data.day3}',
+                        '{$count_wx_data.before}',
+                        '{$count_wx_data.Yesterday}',
+                        '{$count_wx_data.Today}'
+                    ]
+                }
+            ]
+        };
+        echartsRecords.setOption(optionRecords);
+
+        // echarts 窗口缩放自适应
+        window.onresize = function(){
+            echartsRecords.resize();
+        }
+
+    });
+</script>
