@@ -1,37 +1,63 @@
 {
-    "name": "topthink/think",
-    "description": "the new thinkphp framework",
+    "name": "yuanzhumc/ber_short_url",
+    "description": "多功能短链接生成及还原和防红，还支持在QQ、微信、支付宝内置浏览器即时浏览",
     "type": "project",
     "keywords": [
-        "framework",
-        "thinkphp",
-        "ORM"
+        "yuanzhumc",
+        "ber",
+        "short url",
+        "ber_short_url"
     ],
-    "homepage": "http://thinkphp.cn/",
+    "homepage": "https://berf1.cn/",
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "liu21st",
-            "email": "liu21st@gmail.com"
+            "name": "yuanzhumc",
+            "email": "www@berfen.com"
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "topthink/framework": "5.0.*",
-        "yfcmf/geetest": "^1.0",
-      "ext-curl": "*",
-      "ext-json": "*",
-        "bingher/short-url": "^1.1"
+        "php": ">=7.1.0",
+        "topthink/framework": "^6.0.0",
+        "topthink/think-orm": "^2.0",
+        "topthink/think-multi-app": "^1.0",
+        "topthink/think-view": "^1.0",
+        "topthink/think-captcha": "^3.0",
+        "aliyuncs/oss-sdk-php": "^2.3",
+        "qcloud/cos-sdk-v5": "^2.0",
+        "qiniu/php-sdk": "^7.2",
+        "alibabacloud/client": "^1.5",
+        "jianyan74/php-excel": "^1.0",
+        "zhongshaofa/easy-admin": "^1.0.2",
+        "ext-json": "*",
+        "zhongshaofa/thinkphp-log-trace": "^1.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2",
+        "eaglewu/swoole-ide-helper": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "app\\": "application"
+            "app\\": "app"
+        },
+        "psr-0": {
+            "": "extend/"
         }
     },
-    "extra": {
-        "think-path": "thinkphp"
-    },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "secure-http": false
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php think service:discover",
+            "@php think vendor:publish"
+        ]
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        }
     }
 }

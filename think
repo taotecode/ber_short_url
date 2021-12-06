@@ -1,17 +1,10 @@
 #!/usr/bin/env php
 <?php
-// +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2006-2016 http://thinkphp.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: yunwuxin <448901948@qq.com>
-// +----------------------------------------------------------------------
+namespace think;
 
-// 定义项目路径
-define('APP_PATH', __DIR__ . '/application/');
+// 命令行入口文件
+// 加载基础文件
+require __DIR__ . '/vendor/autoload.php';
 
-// 加载框架引导文件
-require __DIR__.'/thinkphp/console.php';
+// 应用初始化
+(new App())->console->run();
