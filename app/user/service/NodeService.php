@@ -10,24 +10,28 @@
 // | github开源项目：https://github.com/zhongshaofa/EasyAdmin
 // +----------------------------------------------------------------------
 
-namespace app\common\constants;
+namespace app\user\service;
 
-/**
- * 菜单常量
- * Class MenuConstant
- * @package app\common\constants
- */
-class MenuConstant
+
+use EasyAdmin\auth\Node;
+
+class NodeService
 {
 
     /**
-     * 首页的PID
+     * 获取节点服务
+     * @return array
+     * @throws \Doctrine\Common\Annotations\AnnotationException
+     * @throws \ReflectionException
      */
-    const HOME_PID = 99999999;
+    public function getNodelist()
+    {
+        $basePath = base_path() . 'user' . DIRECTORY_SEPARATOR . 'controller';
+        $baseNamespace = "app\user\controller";
 
-    /**
-     * 模块名前缀
-     */
-    const MODULE_PREFIX = 'user_';
+        $nodeList  = (new Node($basePath, $baseNamespace))
+            ->getNodelist();
 
+        return $nodeList;
+    }
 }

@@ -10,24 +10,22 @@
 // | github开源项目：https://github.com/zhongshaofa/EasyAdmin
 // +----------------------------------------------------------------------
 
-namespace app\common\constants;
+namespace app\user\service;
 
-/**
- * 菜单常量
- * Class MenuConstant
- * @package app\common\constants
- */
-class MenuConstant
+use think\facade\Cache;
+
+class ConfigService
 {
 
-    /**
-     * 首页的PID
-     */
-    const HOME_PID = 99999999;
-
-    /**
-     * 模块名前缀
-     */
-    const MODULE_PREFIX = 'user_';
+    public static function getVersion()
+    {
+        $version = Cache('version');
+        if (empty($version)) {
+            $version = sysconfig('site', 'site_version');
+            cache('site_version', $version);
+            Cache::set('version', $version, 3600);
+        }
+        return $version;
+    }
 
 }

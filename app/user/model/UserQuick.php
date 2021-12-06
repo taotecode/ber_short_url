@@ -10,24 +10,14 @@
 // | github开源项目：https://github.com/zhongshaofa/EasyAdmin
 // +----------------------------------------------------------------------
 
-namespace app\common\constants;
+namespace app\user\model;
 
-/**
- * 菜单常量
- * Class MenuConstant
- * @package app\common\constants
- */
-class MenuConstant
+
+use app\common\model\TimeModel;
+
+class UserQuick extends TimeModel
 {
 
-    /**
-     * 首页的PID
-     */
-    const HOME_PID = 99999999;
-
-    /**
-     * 模块名前缀
-     */
-    const MODULE_PREFIX = 'user_';
+    protected $deleteTime = 'delete_time';
 
 }
