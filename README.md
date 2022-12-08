@@ -1,52 +1,78 @@
-# <center>ber_Short_Url短链项目</center>
-## <center>V1.2</center>
-##### <center>[中文](https://github.com/yuanzhumc/ber_Short_Url/blob/master/README.md)|[English](https://github.com/yuanzhumc/ber_Short_Url/blob/master/README_EN.md)</center>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-这是由院主网络科技团队开发的一款小型个人站短链接服务。功能有：短链生成，短链还原，防红链接生成，防红和普通短链互转。
-短链接不调用其他网站，直接使用本站链接，方便维护，访问快捷，自定义多样化
-本项目是由jquery+layui组成的
-# <center>更新日志</center>
-##### V1.2
-- 在原有的基础上增加后台管理
-- 增加api调用生成接口
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
-##### V1.0
-- 实现短链生成、短链还原、短链防红，短链互转
+## About Laravel
 
-# <center>演示站</center>
-[berf1.cn](http://berf1.cn)暂不提供后台演示
-api接口文档：[https://www.kancloud.cn/yuanzhu/iapp/1511496](https://www.kancloud.cn/yuanzhu/iapp/1511496 "https://www.kancloud.cn/yuanzhu/iapp/1511496")
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-# <center>安装</center>
-环境要求：Apache、php7.1+、MySql 5.6.5(必须要开启高级功能，否则会导入失败，如果导入失败请通过[blog.berfen.com](https://blog.berfen.com "blog.berfen.com")联系我)
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Nginx需要独立配置伪静态，当然，你可以依靠一些网站在线把apache伪静态转为nginx伪静态
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-一.将public文件夹的内容放入项目根目录，或通过其他文件将网站根目录指像public文件夹
-或者直接把public文件夹里的文件全部取出到网站根目录，**但需要改一下里面的文件路径。**
+## Learning Laravel
 
-二.在数据库中创建一个表，将public文件夹里的`SQL.sql`导入到刚刚创建的表。
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-三.修改**ber/db/init.php**，配置数据库连接。
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-现在就已经安装完成，可以访问你的项目看看啦。
+## Laravel Sponsors
 
-#### <center>后台地址</center>
-由于我是将public文件全部取出安装的，所以我的地址是`http://abc.com/ber/admin/`，一般来说这个地址都可以访问
-后台默认账号密码
-**账号**:**2144680883**
-**密码**:**123456**
-##### 基本配置
-基本所有的网站配置都在`ber/init.php`文件里
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-# <center>短链算法</center>
-我们在ber/Coded.php为你配置了两套算法，供您自主选择
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[British Software Development](https://www.britishsoftware.co)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- [UserInsights](https://userinsights.com)
+- [Fragrantica](https://www.fragrantica.com)
+- [SOFTonSOFA](https://softonsofa.com/)
+- [User10](https://user10.com)
+- [Soumettre.fr](https://soumettre.fr/)
+- [CodeBrisk](https://codebrisk.com)
+- [1Forge](https://1forge.com)
+- [TECPRESSO](https://tecpresso.co.jp/)
+- [Runtime Converter](http://runtimeconverter.com/)
+- [WebL'Agence](https://weblagence.com/)
+- [Invoice Ninja](https://www.invoiceninja.com)
+- [iMi digital](https://www.imi-digital.de/)
+- [Earthlink](https://www.earthlink.ro/)
+- [Steadfast Collective](https://steadfastcollective.com/)
+- [We Are The Robots Inc.](https://watr.mx/)
+- [Understand.io](https://www.understand.io/)
+- [Abdel Elrafa](https://abdelelrafa.com)
+- [Hyper Host](https://hyper.host)
+- [Appoly](https://www.appoly.co.uk)
+- [OP.GG](https://op.gg)
 
-第一个算法即随机数，你可以指定多少位字符串，然后随机生成*位字符串
+## Contributing
 
-第二个是md5字符串分割，分成指定6位，如果你比较了解PHP，你可以自定义多少位字符串
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-使用方法就不用介绍了，很简单的两种算法
-# <center>最后</center>
-关于版权信息：我们对于版权信息很重视，虽然项目很简单，但我们还是希望用户在二开或修改本项目的同时，能够保留一个版权：版权所属：院主网络科技团队
-如果项目有什么问题，欢迎提交，或来到博客留言[http://blog.berfen.com/39.html](http://blog.berfen.com/39.html)
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
